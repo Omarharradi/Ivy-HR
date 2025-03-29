@@ -5,6 +5,8 @@ import numpy as np
 import pandas as pd
 import json
 from plotly.subplots import make_subplots
+import base64
+
 
 
 # Set page configuration as the very first command
@@ -196,7 +198,6 @@ st.markdown(
     """, unsafe_allow_html=True
 )
 
-import base64
 
 def get_base64_of_bin_file(bin_file):
     with open(bin_file, 'rb') as f:
