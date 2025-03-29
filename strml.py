@@ -12,6 +12,19 @@ import base64
 # Set page configuration as the very first command
 st.set_page_config(page_title="Leadership Competency Viewer", layout="wide")
 
+hide_streamlit_style = """
+            <style>
+            /* Hide Streamlit hamburger menu */
+            #MainMenu {visibility: hidden;}
+            /* Hide Streamlit footer */
+            footer {visibility: hidden;}
+            /* Optionally, hide the Streamlit header (if desired) */
+            header {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_streamlit_style, unsafe_allow_html=True)
+
+
 # --- Data Setup (adjust paths as needed) ---
 df = pd.read_excel('LDP_summary.xlsx')
 with open("skills_mapping.json", "r") as f:
