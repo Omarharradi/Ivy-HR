@@ -12,12 +12,25 @@ import base64
 # Set page configuration as the very first command
 st.set_page_config(page_title="Leadership Competency Viewer", layout="wide")
 
+st.markdown(
+    """
+    <style>
+    /* Reduce the top padding of the main content container */
+    .block-container {
+        padding-top: 0.2rem;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 hide_streamlit_style = """
             <style>
             /* Hide Streamlit hamburger menu */
             #MainMenu {visibility: hidden;}
             /* Hide Streamlit footer */
             footer {visibility: hidden;}
+            footer:after {display: none;}
             /* Optionally, hide the Streamlit header (if desired) */
             header {visibility: hidden;}
             </style>
